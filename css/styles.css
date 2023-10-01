@@ -19,7 +19,7 @@
   --bs-orange: #f76400;
   --bs-yellow: #f4a100;
   --bs-green: #00ac69;
-  --bs-teal: #00ba94;
+  --bs-teal: #E3EE84;
   --bs-cyan: #00cfd5;
   --bs-black: #000;
   --bs-white: #fff;
@@ -10817,12 +10817,12 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #003e29!important;
 }
 
 .bg-secondary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--bs-teal) !important;
 }
 
 .bg-success {
@@ -17184,6 +17184,7 @@ body {
   font-size: 1rem;
   background-color: #f2f6fc;
   flex-shrink: 0;
+  color: #003e29;
 }
 .icon-stack svg {
   height: 1rem;
