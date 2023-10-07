@@ -617,6 +617,9 @@ progress {
   padding-left: 0;
   list-style: none;
 }
+.list-unstyled a:hover {
+  text-decoration: underline;
+}
 
 .list-inline {
   padding-left: 0;
