@@ -622,7 +622,7 @@ progress {
 }
 
 h6 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #003e29;
 }
 .list-inline {
