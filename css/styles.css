@@ -18735,3 +18735,68 @@ section {
     border-right: 0.0625rem solid #e0e5ec;
   }
 }
+/* === CIANSW Accordion Theme === */
+
+/* Default (closed) button — white background */
+.accordion-button {
+  background-color: #ffffff !important;
+  color: #0F2B1A !important; /* dark green text */
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Hover state — soft highlight */
+.accordion-button:hover {
+  background-color: #f9faf9 !important;
+}
+
+/* Active (open) button — branded green + lime text */
+.accordion-button:not(.collapsed) {
+  background-color: #184833 !important; /* CIANSW dark green */
+  color: #E5ED91 !important;            /* lime text */
+  box-shadow: none;
+  transition: background-color 0.4s ease, color 0.25s ease;
+}
+
+/* Chevron icon colors */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%230F2B1A' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>") !important; /* dark green */
+  transition: filter 0.4s ease;
+}
+
+/* Active (open) chevron — same colour as text (#E5ED91) */
+.accordion-button:not(.collapsed)::after {
+  background-image: url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23E5ED91' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>") !important; /* lime */;
+}
+
+/* Accordion body — very light tint of green */
+.accordion-body {
+  background-color: #f3f8f5; /* subtle mint tint */
+  color: #0F2B1A;           /* dark readable text */
+}
+
+/* Optional: light border and radius for consistency */
+.accordion-item {
+  border: 1px solid rgba(24, 72, 51, 0.1);
+  border-radius: 0.5rem;
+}
+
+/* Remove the stroke borders from accordion items */
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important; /* ensure no subtle border shadows remain */
+}
+.accordion-collapse {
+  border: none !important;
+}
+.accordion-item + .accordion-item {
+  border-top: none !important;
+}
+.accordion-button::after {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(20%) saturate(705%) hue-rotate(101deg) brightness(96%) contrast(87%);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: invert(88%) sepia(55%) saturate(311%) hue-rotate(16deg) brightness(102%) contrast(97%);
+}
