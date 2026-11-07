@@ -213,3 +213,84 @@ if (captchaPanel && recaptchaSiteKey && recaptchaHosts.includes(location.hostnam
   api.addEventListener('error', useHostedVerification);
   document.head.append(api);
 }
+
+const testimonialCarousel = document.querySelector('[data-testimonial-carousel]');
+if (testimonialCarousel) {
+  const slides = Array.from(testimonialCarousel.querySelectorAll('.testimonial-slide'));
+  const controls = testimonialCarousel.querySelector('[data-testimonial-controls]');
+  const toggle = controls.querySelector('[data-testimonial-toggle]');
+  const count = controls.querySelector('[data-testimonial-count]');
+  const status = testimonialCarousel.querySelector('[data-testimonial-status]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let active = 0;
+  let timer;
+  let playing = !reducedMotion.matches;
+  let hovered = false;
+  let inView = !('IntersectionObserver' in window);
+
+  function schedule() {
+    window.clearTimeout(timer);
+    if (playing && inView && !hovered && !document.hidden) {
+      timer = window.setTimeout(() => show(active + 1), Number(slides[active].dataset.duration));
+    }
+  }
+
+  function show(index, announce = false) {
+    active = (index + slides.length) % slides.length;
+    slides.forEach((slide, position) => {
+      slide.setAttribute('aria-hidden', String(position !== active));
+    });
+    count.textContent = `${active + 1} / ${slides.length}`;
+    if (announce) status.textContent = slides[active].getAttribute('aria-label');
+    schedule();
+  }
+
+  function setPlaying(value) {
+    playing = value;
+    toggle.textContent = value ? 'Pause' : 'Play';
+    toggle.setAttribute('aria-label', value ? 'Pause testimonial rotation' : 'Play testimonial rotation');
+    schedule();
+  }
+
+  controls.querySelector('[data-testimonial-previous]').addEventListener('click', () => {
+    setPlaying(false);
+    show(active - 1, true);
+  });
+  controls.querySelector('[data-testimonial-next]').addEventListener('click', () => {
+    setPlaying(false);
+    show(active + 1, true);
+  });
+  toggle.addEventListener('click', () => setPlaying(!playing));
+  testimonialCarousel.addEventListener('focusin', (event) => {
+    if (event.target.matches(':focus-visible')) setPlaying(false);
+  });
+  testimonialCarousel.addEventListener('pointerenter', (event) => {
+    if (event.pointerType === 'mouse') {
+      hovered = true;
+      schedule();
+    }
+  });
+  testimonialCarousel.addEventListener('pointerleave', (event) => {
+    if (event.pointerType === 'mouse') {
+      hovered = false;
+      schedule();
+    }
+  });
+  document.addEventListener('visibilitychange', schedule);
+  reducedMotion.addEventListener('change', (event) => {
+    if (event.matches) setPlaying(false);
+  });
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      schedule();
+    }, { threshold: .15 });
+    observer.observe(testimonialCarousel);
+  }
+
+  show(0);
+  setPlaying(playing);
+  testimonialCarousel.classList.add('testimonial-carousel-ready');
+  testimonialCarousel.setAttribute('aria-roledescription', 'carousel');
+  controls.hidden = false;
+}
