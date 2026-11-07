@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ciansw.com.au/claims</loc></url>
-  <url><loc>https://ciansw.com.au/contact</loc></url>
-  <url><loc>https://ciansw.com.au/get-a-quote</loc></url>
-  <url><loc>https://ciansw.com.au/</loc></url>
-  <url><loc>https://ciansw.com.au/our-products</loc></url>
-  <url><loc>https://ciansw.com.au/our-services</loc></url>
+  <url><loc>https://ciansw.com.au/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://ciansw.com.au/our-products</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://ciansw.com.au/our-services</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://ciansw.com.au/about</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://ciansw.com.au/claims</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://ciansw.com.au/contact</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://ciansw.com.au/get-a-quote</loc><lastmod>2026-11-07</lastmod></url>
 </urlset>

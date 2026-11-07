@@ -18,7 +18,7 @@ This standalone project is the CIANSW redesign with its full footer, search meta
 
 ## Online services
 
-Local page navigation and assets use relative paths. Public canonical URLs, external links, the YouTube video and FormSubmit still use their online destinations. The contact and quote forms post to FormSubmit for admin@ciansw.com.au. Submitting while previewing locally can send a real enquiry once FormSubmit is activated, and a successful submission returns to the production confirmation URL. The embedded video also requires internet access.
+Local page navigation and assets use relative paths. Public canonical URLs, external links and the YouTube video use their online destinations. The contact and quote forms post to Web3Forms (access keys are public by design and tied to admin@ciansw.com.au). Submitting while previewing locally sends a real enquiry. The embedded video needs internet access.
 
 ## Google reCAPTCHA
 

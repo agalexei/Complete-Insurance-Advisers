@@ -21,6 +21,26 @@
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/redesign.css">
   <script src="js/redesign.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ciansw.com.au/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Our products",
+      "item": "https://ciansw.com.au/our-products"
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
@@ -32,7 +52,7 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span
           aria-hidden="true">☰</span></button>
       <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="/">Home</a><a href="our-products"
-          aria-current="page">Our products</a><a href="our-services">Our services</a><a href="claims">Make a claim</a><a
+          aria-current="page">Our products</a><a href="our-services">Our services</a><a href="about">About us</a><a href="claims">Make a claim</a><a
           href="contact">Contact us</a><a href="get-a-quote">Get a quote</a></nav>
     </div>
   </header>
@@ -248,7 +268,53 @@
               <a class="text-link" href="get-a-quote?cover=business-travel&amp;intent=business">Request a quote for this
                 cover →</a>
             </article>
-          </div>
+          <article class="soft-card product-card" id="strata">
+          <h3>Strata Insurance</h3><p>Cover for owners corporations and strata managers, protecting common property and the people who use it.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Building and common property damage</p></li>
+                                <li><p>Public liability for common areas</p></li>
+                                <li><p>Office bearers’ liability</p></li>
+                                <li><p>Fidelity guarantee</p></li>
+                                <li><p>Machinery breakdown</p></li>
+                            </ul></details>
+          <a class="text-link" href="get-a-quote?cover=strata&amp;intent=business">Request a quote for this cover →</a>
+        </article><article class="soft-card product-card" id="property-owners">
+          <h3>Property Owners Insurance</h3><p>Cover for owners of residential and commercial investment properties.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Damage to the building from fire, storm and other events</p></li>
+                                <li><p>Loss of rent</p></li>
+                                <li><p>Public liability for the property</p></li>
+                                <li><p>Glass breakage</p></li>
+                            </ul></details>
+          <a class="text-link" href="get-a-quote?cover=property-owners&amp;intent=business">Request a quote for this cover →</a>
+        </article><article class="soft-card product-card" id="management-liability">
+          <h3>Management Liability Insurance</h3><p>Protects the business and the people running it against claims arising from how the business is managed.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Directors and officers liability</p></li>
+                                <li><p>Employment practices claims</p></li>
+                                <li><p>Statutory liability, where insurable</p></li>
+                                <li><p>Crime and fidelity</p></li>
+                                <li><p>Legal defence costs</p></li>
+                            </ul></details>
+          <a class="text-link" href="get-a-quote?cover=management-liability&amp;intent=business">Request a quote for this cover →</a>
+        </article><article class="soft-card product-card" id="directors-officers">
+          <h3>Directors and Officers Insurance</h3><p>Protects directors and officers if they’re personally targeted by a claim over a decision they made for the company.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Legal defence costs</p></li>
+                                <li><p>Claims from shareholders, employees and regulators</p></li>
+                                <li><p>Regulatory investigation costs</p></li>
+                                <li><p>Cover for not-for-profit boards</p></li>
+                            </ul></details>
+          <a class="text-link" href="get-a-quote?cover=directors-officers&amp;intent=business">Request a quote for this cover →</a>
+        </article><article class="soft-card product-card" id="workers-compensation">
+          <h3>Workers Compensation Insurance</h3><p>Compulsory for most NSW employers. Covers wages and medical costs when an employee is injured or becomes ill because of work.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Wage replacement for injured workers</p></li>
+                                <li><p>Medical and rehabilitation costs</p></li>
+                                <li><p>Return-to-work support</p></li>
+                            </ul></details>
+          <a class="text-link" href="get-a-quote?cover=workers-compensation&amp;intent=business">Request a quote for this cover →</a>
+        </article></div>
         </section>
         <section class="product-group" id="trades">
           <h2>Trades & construction</h2>
@@ -354,38 +420,66 @@
               <a class="text-link" href="get-a-quote?cover=heavy-motor&amp;intent=business">Request a quote for this
                 cover →</a>
             </article>
-          </div>
+          <article class="soft-card product-card" id="marine">
+          <h3>Marine Insurance</h3><p>Cover for goods moving by sea, air or road, and for vessels used in business.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Marine cargo (goods in transit)</p></li>
+                                <li><p>Damage to commercial vessels</p></li>
+                                <li><p>Liability arising from vessel operation</p></li>
+                            </ul></details>
+          <a class="text-link" href="get-a-quote?cover=marine&amp;intent=business">Request a quote for this cover →</a>
+        </article></div>
         </section>
         <section class="product-group" id="personal">
           <h2>Personal cover</h2>
           <div class="grid grid-three">
             <article class="soft-card product-card" id="home-contents">
-              <h3>Home &amp; Contents Insurance</h3>
-              <p>Talk to us about your personal insurance needs.</p>
+              <h3>Home &amp; Contents Insurance</h3><p>Protects your home and the belongings inside it against events like fire, storm, theft and accidental damage. We help you set sums insured that reflect real replacement costs.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Building cover</p></li>
+                                <li><p>Contents cover</p></li>
+                                <li><p>Options for valuables and accidental damage</p></li>
+                            </ul></details>
               <a class="text-link" href="get-a-quote?cover=home-contents&amp;intent=personal">Request a quote for this
                 cover →</a>
             </article>
             <article class="soft-card product-card" id="landlords">
-              <h3>Landlord’s Insurance</h3>
-              <p>Talk to us about your personal insurance needs.</p>
+              <h3>Landlord’s Insurance</h3><p>Cover for your rental property, including damage to the building and the contents you supply, plus risks specific to landlords.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Building and contents damage</p></li>
+                                <li><p>Loss of rent</p></li>
+                                <li><p>Tenant damage and liability</p></li>
+                            </ul></details>
               <a class="text-link" href="get-a-quote?cover=landlords&amp;intent=personal">Request a quote for this cover
                 →</a>
             </article>
             <article class="soft-card product-card" id="personal-motor">
-              <h3>Personal Motor Vehicle Insurance</h3>
-              <p>Talk to us about your personal insurance needs.</p>
+              <h3>Personal Motor Vehicle Insurance</h3><p>Cover for your car against accidental damage, theft, fire and liability to others. Choose the level of cover that suits the car and your budget.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Comprehensive</p></li>
+                                <li><p>Third party property damage</p></li>
+                                <li><p>Third party fire and theft</p></li>
+                            </ul></details>
               <a class="text-link" href="get-a-quote?cover=personal-motor&amp;intent=personal">Request a quote for this
                 cover →</a>
             </article>
             <article class="soft-card product-card" id="caravan-trailer">
-              <h3>Caravan &amp; Trailer Insurance</h3>
-              <p>Talk to us about your personal insurance needs.</p>
+              <h3>Caravan &amp; Trailer Insurance</h3><p>Cover for caravans, camper trailers and other trailers against damage, theft, fire and storm.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Accidental damage</p></li>
+                                <li><p>Theft, fire and storm</p></li>
+                                <li><p>Contents and personal effects</p></li>
+                            </ul></details>
               <a class="text-link" href="get-a-quote?cover=caravan-trailer&amp;intent=personal">Request a quote for this
                 cover →</a>
             </article>
             <article class="soft-card product-card" id="boat">
-              <h3>Boat Insurance</h3>
-              <p>Talk to us about your personal insurance needs.</p>
+              <h3>Boat Insurance</h3><p>Cover for boats, personal watercraft and their trailers against accidental damage, theft and fire, plus liability to others.</p><details class="product-details"><summary>Cover details</summary><p><strong>Cover can include:</strong></p>
+                            <ul class="mb-0">
+                                <li><p>Accidental damage</p></li>
+                                <li><p>Theft and fire</p></li>
+                                <li><p>Third party liability</p></li>
+                            </ul></details>
               <a class="text-link" href="get-a-quote?cover=boat&amp;intent=personal">Request a quote for this cover
                 →</a>
             </article>
@@ -405,6 +499,7 @@
             <li><a href="tel:0411541698">0411 541 698</a></li>
             <li>Complete Insurance Advisers NSW Pty Ltd</li>
             <li>ACN: 670 920 073</li>
+            <li>ABN: 34 670 920 073</li>
             <li>ASIC Authorised Representative No: 1306285</li>
           </ul>
           <ul class="footer-links footer-social" aria-label="Social media">
@@ -420,6 +515,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="our-products">Our products</a></li>
             <li><a href="our-services">Our services</a></li>
+          <li><a href="about">About us</a></li>
             <li><a href="get-a-quote">Get a quote</a></li>
             <li><a href="claims">Make a claim</a></li>
             <li><a href="contact">Contact us</a></li>
