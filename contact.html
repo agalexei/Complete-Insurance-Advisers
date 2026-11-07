@@ -73,15 +73,15 @@
                                     <input type="hidden" name="_captcha" value="false">
             <h2 id="contact-form-title">Send an enquiry</h2>
             <div class="form-grid"><label class="field"><span>Full name</span><input name="name" pattern=".*\p{L}.*"
-                  title="Enter text containing at least one letter." autocomplete="name" required></label><label
-                class="field"><span>Email address</span><input name="email" type="email" autocomplete="email"
-                  required></label><label class="field"><span>Phone number <small>(optional)</small></span><input
+                  title="Enter text containing at least one letter." autocomplete="name" id="inputName" type="text" required></label><label
+                class="field"><span>Email address</span><input name="email" type="email" autocomplete="email" id="inputEmail"
+                  required multiple></label><label class="field"><span>Phone number <small>(optional)</small></span><input
                   name="phone" type="tel" autocomplete="tel"
                   pattern="\+?[\p{Zs}\(\)\-.]*(?:[0-9][\p{Zs}\(\)\-.]*){6,15}"
-                  title="Enter 6–15 digits. Spaces, brackets, hyphens and a leading + are allowed."></label></div>
-            <label class="field"><span>Your enquiry</span><textarea name="enquiry" data-require-letter rows="5"
+                  title="Enter 6–15 digits. Spaces, brackets, hyphens and a leading + are allowed." id="inputNumber" type="tel" minlength="8" maxlength="12"></label></div>
+            <label class="field"><span>Your enquiry</span><textarea name="enquiry" id="inputMessage" type="text" data-require-letter rows="5"
                 required></textarea></label>
-            <p class="hint">We use these details to respond to your enquiry. <a
+            <p class="hint">We use these details to respond to your enquiry. ::<a
                 href="https://ausure.com.au/privacy-terms/" target="_blank" rel="noopener noreferrer">Read the privacy
                 policy</a>.</p>
             <div class="text-start"><button class="button" type="submit">Send enquiry →</button></div>
